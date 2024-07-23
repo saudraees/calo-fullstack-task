@@ -10,11 +10,11 @@ You should have a clone of this repository on your pc.
 	 - On terminal 1, navigate to the calo-server directory inside the cloned repository
 	 - run `npm i` and all relevant packages should be installed successfully.
 	 - make a copy of the *.env.default* file, rename it to *.env*, and paste your Unsplash access key inside that file.
-	 - execute *npm run start* to spin up your server on port 8080.
+	 - execute `npm run start` to spin up your server on port 8080.
 -	Step 3
 	-	On terminal 2, navigate to the calo-ui directory inside the cloned repository
 	-	run `npm i` and all relevant packages should be installed successfully.
-	-	execute *npm run start* to start up your client on localhost:3000.
+	-	execute `npm run start` to start up your client on localhost:3000.
 
 
 ## Time Report
