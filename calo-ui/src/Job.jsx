@@ -52,6 +52,7 @@ const Job = () => {
     <Space
       direction="vertical"
       style={{
+        margin: "10px",
         padding: "5px",
         width: "80%",
         border: "1px solid black",

@@ -29,9 +29,6 @@ const processQueue = async () => {
 };
 
 module.exports = {
-    async getCompleteJobs() {
-        return jobs
-    },
     async getAllJobs(req, res) {
         const jobRes = jobs.map((job) => {
             if (job.status === 'completed')
@@ -48,7 +45,7 @@ module.exports = {
         if (jobById)
             return res.json(jobById.result ?? jobById.status)
         else
-            return res.status(404).json({ error: `Job with ID ${id} not found` });
+            return res.json({ error: `Job with ID ${id} not found` });
     },
     async createJob(req, res) {
         try {
