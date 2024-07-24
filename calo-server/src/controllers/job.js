@@ -8,7 +8,7 @@ const executeJob = async (job) => {
     let retries = 0;
     while (retries < MAX_RETRIES) {
         try {
-            const { response } = await unsplashService.getRandomPhoto();
+            const { response } = await unsplashService.getRandomPhoto({ query: 'food' });
             job.status = 'completed';
             job.result = response.urls.regular;
             return;
@@ -49,7 +49,7 @@ module.exports = {
     },
     async createJob(req, res) {
         try {
-            const delay = Math.floor(Math.random() * 55) * 5 + 5;
+            const delay = Math.floor(Math.random() * 60) * 5 + 5;
             const newJob = {
                 id: `${jobs.length + 1}`,
                 status: 'pending',

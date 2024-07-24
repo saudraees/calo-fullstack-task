@@ -17,6 +17,9 @@ const Job = () => {
 
   useEffect(() => {
     fetchJobs();
+
+    const interval = setInterval(fetchJobs, 5000); // Poll every 5 seconds
+    return () => clearInterval(interval); // Clean up on unmount
   }, []);
 
   const columns = [
